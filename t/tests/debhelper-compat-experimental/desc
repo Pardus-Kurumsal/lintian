@@ -1,0 +1,10 @@
+Testname: debhelper-compat-experimental
+Version: 1.0
+Description: Test for old debian/compat file
+# Overrides the "data/debhelper/compat-level"
+Profile: lintian-test
+Skeleton: pedantic
+Options: --pedantic -I -E
+Test-Depends: debhelper (>= 9.20141221),
+Test-For:
+ package-uses-experimental-debhelper-compat-version

@@ -1,0 +1,5 @@
+Testname: debconf-no-templates
+Version: 1.0
+Description: Test for missing debconf templates
+Test-For: no-debconf-templates
+

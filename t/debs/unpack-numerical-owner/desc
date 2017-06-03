@@ -1,0 +1,6 @@
+Testname: unpack-numerical-owner
+Version: 1.0
+Description: Test for tarballs with numerical owner only
+Test-Against:
+ bad-owner-for-doc-file
+ control-file-has-bad-owner

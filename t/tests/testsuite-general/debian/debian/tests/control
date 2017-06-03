@@ -1,0 +1,36 @@
+Tests: test-1
+Comment: Test-1 is öh so good.
+ Last paragraph misses a Tests field.
+
+Tests: fifo missing-test under_score
+
+Tests: test-in-subdir
+Restrictions:
+ rw-build-tree
+ breaks-testbed
+ needs-root
+ build-needed
+Depends: @
+Features:
+Tests-Directory: subdir
+
+Test-Command: /bin/true
+Depends: @
+
+Tests: test-2
+Test-Command: /bin/true
+Depends: @, missing a comma
+
+Test-Command: /bin/true
+Features: unknownfeature
+Restrictions: unknownrestriction
+
+Test-Command: /bin/true
+Restrictions: breaks-testbed, rw-build-tree, needs-root
+Depends: @, @builddeps@
+
+Tests: test-1, test-2
+Depends: @
+
+Tests: asym, asym1, self, self1, broken, lfifo, working
+Depends: @

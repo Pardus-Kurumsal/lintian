@@ -1,0 +1,18 @@
+Testname: testsuite-general
+Version: 1.0
+Description: General tests of the autopkgtest control file
+Options: -I -E --pedantic
+Skeleton: pedantic
+# according to changelog dpkg 1.17.11:
+# * Automatically add the Testsuite field in dpkg-source to the .dsc file
+Test-Depends: dpkg (>= 1.17.11)
+Test-For:
+ debian-tests-control-uses-national-encoding
+ exclusive-runtime-tests-field
+ illegal-runtime-test-name
+ missing-runtime-test-file
+ runtime-test-file-is-not-a-regular-file
+ testsuite-dependency-has-unparsable-elements
+ unknown-runtime-tests-feature
+ unknown-runtime-tests-field
+ unknown-runtime-tests-restriction

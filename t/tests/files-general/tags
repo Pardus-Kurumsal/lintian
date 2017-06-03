@@ -1,0 +1,34 @@
+E: files-general: FSSTND-dir-in-usr usr/doc/
+E: files-general: FSSTND-dir-in-var var/catman/
+E: files-general: bad-perm-for-file-in-etc-sudoers.d etc/sudoers.d/sudotest 0644 != 0440
+E: files-general: config-file-reserved etc/pam.conf by libpam-runtime
+E: files-general: dir-or-file-in-var-lock var/lock/lintian/
+E: files-general: dir-or-file-in-var-run var/run/lintian/
+E: files-general: executable-manpage usr/share/man/man5/foo.5.gz
+E: files-general: file-name-in-PATH-is-not-ASCII usr/bin/?????????
+E: files-general: file-name-is-not-valid-UTF-8 usr/share/foo/bokm?l
+E: files-general: global-data-in-games-directory usr/share/games/icons/hicolor/22x22/lintian-22x22.png
+E: files-general: lengthy-symlink usr/share/doc/bar/star ../bar/foo
+E: files-general: non-conf-file-in-modprobe.d etc/modprobe.d/--lzma
+E: files-general: non-standard-toplevel-dir new-top-level-dir/
+E: files-general: package-contains-info-dir-file usr/share/info/dir.gz
+E: files-general: package-contains-mime-cache-file usr/share/mime/types
+E: files-general: package-contains-mimeinfo.cache-file usr/share/applications/mimeinfo.cache
+E: files-general: package-modifies-ld.so-search-path etc/ld.so.conf.d/lintian-lib.conf
+E: files-general: star-file usr/share/foo/*
+E: files-general: stray-directory-in-manpage-directory usr/share/man/man1/random/
+I: files-general: duplicated-compressed-file usr/share/doc/lintian/lintian-16x16.png.gz
+I: files-general: package-contains-empty-directory usr/share/man/man1/random/
+W: files-general: backup-file-in-package usr/share/foo/file~
+W: files-general: executable-not-elf-or-script usr/share/man/man5/foo.5.gz
+W: files-general: file-in-unusual-dir new-top-level-dir/file-in-new-top-level-dir
+W: files-general: file-in-unusual-dir var/catman/do
+W: files-general: file-name-contains-wildcard-character usr/share/foo/*
+W: files-general: file-name-ends-in-whitespace usr/share/foo/ws 
+W: files-general: icon-size-and-directory-name-mismatch usr/share/apps/lintian/icons/hicolor/22x22/lintian-16x16.png 16x16
+W: files-general: icon-size-and-directory-name-mismatch usr/share/apps/lintian/icons/hicolor/64x64/lintian-64x64.png 22x22
+W: files-general: icon-size-and-directory-name-mismatch usr/share/icons/hicolor/22x22/apps/lintian-16x16.png 16x16
+W: files-general: nfs-temporary-file-in-package usr/share/foo/.nfs-fake-tmpfile
+W: files-general: obsolete-comments-style-in-php-ini etc/php/7.0/mods-available/php-foo.ini
+W: files-general: raster-image-in-scalable-directory usr/share/icons/hicolor/scalable/apps/lintian-16x16.png
+W: files-general: windows-devel-file-in-package usr/lib/foo/foo.vcproj

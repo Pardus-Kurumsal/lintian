@@ -1,0 +1,10 @@
+Testname: files-python-general
+Version: 1.0
+Description: Test general Python related tags
+References: Debian Bug#608810, Debian Bug#756005
+Test-For:
+ file-should-not-be-compressed
+ package-installs-python-bytecode
+ package-installs-python-egg
+ package-installs-python-pycache-dir
+ python-debug-in-wrong-location

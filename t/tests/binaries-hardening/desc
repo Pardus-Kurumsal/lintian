@@ -1,0 +1,9 @@
+Testname: binaries-hardening
+Version: 1.0
+Description: Check for missing hardening features
+Architecture: amd64 i386 armhf arm64
+Test-For:
+ hardening-no-bindnow
+ hardening-no-fortify-functions
+ hardening-no-pie
+ hardening-no-relro

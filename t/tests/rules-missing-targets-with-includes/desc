@@ -1,0 +1,6 @@
+Testname: rules-missing-targets-with-includes
+Version: 1.0
+Description: Test for debian/rules with targets implemented in included
+ file.
+Test-Against: debian-rules-missing-required-target
+References: Debian Bug#607281

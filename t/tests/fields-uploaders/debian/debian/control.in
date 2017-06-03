@@ -1,0 +1,22 @@
+Source: {$source}
+Priority: extra
+Section: devel
+Maintainer: {$author}
+Uploaders: Mrs. Localhost <user@localhost>,
+           Mr. Weird<no-space@somewhere.com>,
+           Malformed Email <@ddress@myspace.com>,
+           John A. J. Doe <i.am.ok@somewhere.com>,
+           Doris Double-Email <Doris Double-Email <doris@demail.com>>,
+           Valid email <0@somewhere.com>
+Standards-Version: {$standards_version}
+Build-Depends: {$build_depends}
+
+Package: {$source}
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description}
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+

@@ -1,0 +1,5 @@
+Testname: files-extra-license
+Version: 1.0
+Description: Test for extra license files
+Test-For:
+ extra-license-file

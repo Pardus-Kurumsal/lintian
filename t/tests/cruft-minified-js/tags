@@ -1,0 +1,29 @@
+E: cruft-minified-js source: source-is-missing deployJava/deployJava.js
+E: cruft-minified-js source: source-is-missing usr/share/javascript/jswithoutminextwithoutsource/jsonnotsourced.js line length is NUMBER characters (>CUTOFF)
+E: cruft-minified-js source: source-is-missing usr/share/javascript/minwithoutsource/notsourced.min.js
+P: cruft-minified-js source: insane-line-length-in-source-file oldfalsepositives/jslint.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: insane-line-length-in-source-file oldfalsepositives/longlicensetext.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: insane-line-length-in-source-file usr/share/javascript/jswithoutminext/json.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: insane-line-length-in-source-file usr/share/javascript/jswithoutminextwithoutsource/jsonnotsourced.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/-debug.js/src/test-min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/-nc.js/test-yc.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/debug.js/testdebug.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/nested-dir/dist/fake.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/src.js/test.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-compiled.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-compressed.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-lite.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-pack.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-packed.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test-yc.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test.compressed.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object oldfalsepositives/suffix/test_min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/json/json.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/jswithoutminext/json.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/jswithoutminextwithoutsource/jsonnotsourced.js line length is NUMBER characters (>CUTOFF)
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/minwithoutsource/notsourced.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/sourced/sourced.min.js
+P: cruft-minified-js source: source-contains-prebuilt-javascript-object usr/share/javascript/sourced_variant/sourced.min.js
+P: cruft-minified-js source: source-contains-prebuilt-pandoc-documentation oldfalsepositives/pandoc/

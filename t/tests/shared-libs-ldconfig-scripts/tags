@@ -1,0 +1,7 @@
+E: libfoo1: package-must-activate-ldconfig-trigger usr/lib/libfoo.so.1.0.1
+W: app: maintscript-calls-ldconfig postinst
+W: app: maintscript-calls-ldconfig postrm
+W: app: package-has-unnecessary-activation-of-ldconfig-trigger
+W: libfish1: maintscript-calls-ldconfig preinst
+W: libfish1: maintscript-calls-ldconfig prerm
+W: libuns1: maintscript-calls-ldconfig postrm

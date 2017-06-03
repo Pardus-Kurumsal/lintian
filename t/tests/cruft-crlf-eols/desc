@@ -1,0 +1,5 @@
+Testname: cruft-crlf-eols
+Version: 1.0
+Description: Check that control files with CRLF EOLs are reported
+Test-For:
+ control-file-with-CRLF-EOLs

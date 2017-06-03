@@ -1,0 +1,5 @@
+Testname: fields-version-bad-rc
+Version: 1.0+rc3-1
+Description: Test for bad release cand. versions
+Type: non-native
+Test-For: rc-version-greater-than-expected-version

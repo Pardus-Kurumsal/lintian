@@ -1,0 +1,7 @@
+Testname: fields-uncanonical-vcs-fields
+Description: Test for vcs fields needing canonization
+Version: 1.0
+Test-For:
+ vcs-field-bitrotted
+ vcs-field-not-canonical
+ vcs-git-uses-invalid-user-uri

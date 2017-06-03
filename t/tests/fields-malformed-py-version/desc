@@ -1,0 +1,6 @@
+Testname: fields-malformed-py-version
+Version: 1.0
+Description: Test for malformed python-version field
+Test-For:
+ malformed-python-version
+ python-version-current-is-deprecated

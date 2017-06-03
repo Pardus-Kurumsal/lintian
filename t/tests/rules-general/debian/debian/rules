@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+DEB_AUTO_UPDATE_DEBIAN_CONTROL = yes
+
+%:
+	dh $@
+
+clean:
+	dh_clean
+	echo $(DEB_BUILD_OPTS) $(PWD)
+	@echo $(_)

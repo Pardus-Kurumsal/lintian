@@ -1,0 +1,5 @@
+Testname: fields-perl-provides
+Version: 0.26
+Description: Test for packages provided by perl
+Test-For: package-superseded-by-perl
+

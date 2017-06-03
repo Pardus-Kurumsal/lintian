@@ -1,0 +1,5 @@
+Testname: fields-architecture
+Version: 1.0
+Description: Tests for the Architecture field
+Architecture: linux-any any-i386 kfreebsd-any hurd-any
+Test-Against: unknown-architecture

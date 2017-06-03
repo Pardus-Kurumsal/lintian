@@ -1,0 +1,6 @@
+Testname: changelog-file-no-dch
+Type: non-native
+Version: 1.0-1
+Description: Test if Debian changelog is missing
+Test-For: debian-changelog-file-missing-or-wrong-name
+Test-Against: syntax-error-in-debian-changelog

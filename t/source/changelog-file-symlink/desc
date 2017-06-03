@@ -1,0 +1,4 @@
+Testname: changelog-file-symlink
+Version: 1.0
+Description: Test for d/changelog being a symlink
+Test-For: changelog-is-symlink

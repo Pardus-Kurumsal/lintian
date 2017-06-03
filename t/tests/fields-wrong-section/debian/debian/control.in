@@ -1,0 +1,195 @@
+Source: {$source}
+Priority: extra
+Section: {$section}
+Maintainer: {$author}
+Standards-Version: {$standards_version}
+Build-Depends: {$build_depends}
+
+Package: {$source}
+Architecture: any
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description}
+ Only here as valid dependency for {$source}-dbg.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: {$source}-doc
+Architecture: all
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (doc)
+ Test for doc section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: {$source}-dbg
+Architecture: any
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}, {$source} (= $\{binary:Version\})
+Description: {$description} (debug)
+ Test for debug section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-dev
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (dev)
+ Test for libdevel section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-perl
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (perl)
+ Test for perl section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: python-{$source}
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (Python)
+ Test for Python section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-ocaml-dev
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (OCaml)
+ Test for OCaml section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: libjs-{$source}
+Architecture: any
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (Javascript)
+ Test for web section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: libghc-{$source}
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (Haskell)
+ Test for Haskell section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-cil
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (CLI/Mono)
+ Test for CLI/Mono section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: libphp-{$source}
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (PHP)
+ Test for PHP section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-ruby1.8
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (Ruby)
+ Test for Ruby section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-java
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (Java)
+ Test for Java section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: r-cran-{$source}
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (GNU R)
+ Test for GNU R section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: lib{$source}-oldlibs-dev
+Architecture: {$architecture}
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Section: oldlibs
+Description: {$description} (oldlibs)
+ Test for oldlibs section.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: {$source}-contrib-doc
+Architecture: all
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Section: contrib/{$section}
+Description: {$description} (contrib docs)
+ Test for suggestion for packages not in main.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.
+
+Package: gir1.2-{$source}-0.1
+Architecture: all
+Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
+Description: {$description} (gir1.2-pkg)
+ Test for gir1.2 packages.
+ .
+ This is a test package designed to exercise some feature or tag of
+ Lintian.  It is part of the Lintian test suite and may do very odd
+ things.  It should not be installed like a regular package.  It may
+ be an empty package.

@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Create all the various junk that shouldn't exist in the diff so that we can
+# trigger all the tags.
+
+set -e
+dir="$1"
+jsdir="$1/usr/share/javascript/"
+srcdir="$1"
+json="$srcdir/debian/missing-sources/json.js"
+uglyjson="$jsdir/json/json.min.js"
+
+mkdir -p "$jsdir"
+mkdir -p "$jsdir/minwithoutsource"
+mkdir -p "$jsdir/jswithoutminext"
+mkdir -p "$jsdir/json"
+mkdir -p "$jsdir/sourced"
+mkdir -p "$jsdir/sourced_variant"
+mkdir -p "$jsdir/jswithoutminextwithoutsource/"
+
+# create a js file
+uglifyjs -o "$uglyjson" "$json"
+# fake install of minified js without min.js
+cp "$uglyjson" "$jsdir/jswithoutminext/json.js"
+# fake not sourced
+cp "$uglyjson" "$jsdir/minwithoutsource/notsourced.min.js"
+# fake install but not sourced
+cp "$uglyjson" "$jsdir/jswithoutminextwithoutsource/jsonnotsourced.js"
+# fake source and min alone
+cp "$uglyjson" "$jsdir/sourced/sourced.min.js"
+cp "$json" "$jsdir/sourced/sourced.js"
+cp "$uglyjson" "$jsdir/sourced_variant/sourced.min.js"
+cp "$json" "$jsdir/sourced_variant/sourced_orig.js"
+
+
+
+
+
+

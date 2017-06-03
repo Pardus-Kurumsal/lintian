@@ -1,0 +1,12 @@
+[Unit]
+After=network.target \
+syslog.target
+
+[Service]
+ExecStartPre = /bin/true
+ExecStart=/usr/bin/test
+
+[Install]
+WantedBy=multi-user.target
+Alias=systemd-aliasd.service
+Alias=anothertest

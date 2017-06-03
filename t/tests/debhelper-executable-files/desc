@@ -1,0 +1,4 @@
+Testname: debhelper-executable-files
+Version: 1.0
+Description: Tests related to executable packaging files
+Test-For: package-file-is-executable

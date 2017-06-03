@@ -1,0 +1,2 @@
+E: deb-format-no-compress: uses-no-compression-for-control-tarball
+E: deb-format-no-compress: uses-no-compression-for-data-tarball

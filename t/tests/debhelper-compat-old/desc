@@ -1,0 +1,9 @@
+Testname: debhelper-compat-old
+Version: 1.0
+Description: Test for old debian/compat file
+Skeleton: pedantic
+Options: --pedantic -I -E -L +classification
+Profile: lintian-test
+Test-For:
+ package-uses-old-debhelper-compat-version
+ debian-build-system

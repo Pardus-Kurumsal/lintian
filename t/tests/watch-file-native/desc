@@ -1,0 +1,5 @@
+Testname: watch-file-native
+Version: 1.0
+Description: Native package with a watch file
+Test-For:
+ debian-watch-file-in-native-package

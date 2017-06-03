@@ -1,0 +1,5 @@
+Testname: cruft-perl
+Version: 1.0
+Description: Misc errors related to Perl
+Test-For:
+ mentions-deprecated-usr-lib-perl5-directory

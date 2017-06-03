@@ -1,0 +1,8 @@
+Testname: shared-libs-ldconfig-scripts
+Version: 1.0
+Test-Depends: debhelper (>= 9.20151004~)
+Description: Test checks related to ldconfig in scripts
+Test-For: 
+ maintscript-calls-ldconfig
+ package-has-unnecessary-activation-of-ldconfig-trigger
+ package-must-activate-ldconfig-trigger

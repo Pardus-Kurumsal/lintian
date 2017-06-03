@@ -1,0 +1,90 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use autodie;
+
+use Pod::Simple::HTMLBatch;
+
+my (@input, $output, $version);
+
+$output = pop @ARGV;
+@input = @ARGV;
+
+push @input, './lib', './doc/tutorial' unless @input;
+$output //= './doc/api.html';
+$version = guess_version();
+
+if (!-d $output) {
+    mkdir $output or die "could not create directory: $!";
+}
+
+$Pod::Simple::HTML::Doctype_decl
+  = q{<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"}
+  . qq{ "http://www.w3.org/TR/html4/loose.dtd">\n};
+
+$Pod::Simple::HTML::Content_decl
+  = q{<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">};
+
+my $convert = Pod::Simple::HTMLBatch->new;
+$convert->html_render_class('My::Pod::Simple::HTML');
+$convert->contents_page_start(header());
+# No footer - it contains a "current time" and is thus unreproducible
+$convert->contents_page_end(q{});
+$convert->batch_convert(\@input, $output);
+
+print "HTML version available at $output/index.html\n";
+
+sub header {
+
+    return <<EOF;
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+         "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Lintian (v$version) API doc</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body class='contentspage'>
+<h1>Lintian (v$version) API doc</h1>
+<p><em>Note: </em>This API is not stable between releases.</p>
+EOF
+}
+
+sub guess_version {
+    my $version;
+    my $dist;
+    open(my $fd, '-|', 'dpkg-parsechangelog', '-c0');
+    while (my $line = <$fd>) {
+        $version = $1 if $line =~ m{\A Version: \s*+ (\S++) \s* \Z}xsm;
+        $dist = $1 if $line =~ m{\A Distribution: \s*+ (\S++) \s* \Z}xsm;
+    }
+    close($fd);
+    if ((not defined($dist) or $dist eq 'UNRELEASED') and -d '.git') {
+        # For unreleased versions, git describe is probably a better
+        # choice when available.
+        my $guess;
+        require IPC::Run;
+        delete $ENV{'GITDIR'};
+        eval {
+            # Ignore git being missing (or even failing to work)
+            # - the version being incorrect for non-release cases is
+            #   not a major issue.
+            IPC::Run::run(['git', 'describe'], \undef, \$guess);
+            chomp $guess;
+            $version = $guess if $guess ne '' && $guess =~ m{\A \d+\. }xsm;
+        };
+    }
+    return $version;
+}
+
+package My::Pod::Simple::HTML;
+
+use strict;
+use warnings;
+use parent qw(Pod::Simple::HTML);
+
+# Skip the version tag (incl. a date) to get reproducible output
+sub version_tag_comment {
+    return q{};
+}
