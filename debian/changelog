@@ -1,3 +1,10 @@
+lintian (2.5.50.4pardus1) onyedi; urgency=medium
+
+  * Add pardus into known-dists
+  * Add .drone.yml
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Thu, 24 Aug 2017 16:47:24 +0300
+
 lintian (2.5.50.4) unstable; urgency=medium
 
   * checks/upstream-metadata.pm:
